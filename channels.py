@@ -17,7 +17,7 @@ class fb(channel): #Class for facebook
         self.status = "Success"
         self.error_code = 0
         
-    def broadcast(self,graph):
+    def broadcast(self):
         try:
             
             print "starting broadcast"
