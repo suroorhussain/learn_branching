@@ -16,12 +16,11 @@ class fb(channel): #Class for facebook
         self.post = message
         self.status = "Success"
         self.error_code = 0
-        
-    def broadcast(self):
+
+    graph = facebook.GraphAPI(self.access_token)
+    def broadcast(self, graph):
         try:
-            
             print "starting broadcast"
-            graph = facebook.GraphAPI(self.access_token)
             graph.put_object("me", "feed", message = self.post)
             self.error_code = 1
             
