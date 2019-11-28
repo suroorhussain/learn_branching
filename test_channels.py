@@ -3,7 +3,7 @@ from mock import Mock
 import facebook
 
 def test_facebook_broadcast():
-    mock = Mock(facebook.GraphAPI)
+    mocked = Mock(facebook.GraphAPI)
     face_book = channels.fb("token", "message")
     face_book.broadcast(mock)
 
